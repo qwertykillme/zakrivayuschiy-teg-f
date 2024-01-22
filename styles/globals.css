@@ -38,8 +38,18 @@ input {
 }
 
 ul,
-ol {
+ol, 
+li {
   list-style: none;
+  padding: none;
+  background: transparent;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -51,3 +61,5 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+

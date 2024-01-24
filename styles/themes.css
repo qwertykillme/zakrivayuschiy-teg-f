@@ -10,11 +10,16 @@
   --bg_image: url(../images/bg\ light.png);
   --bg_color: #fff;
   --font_weight: 400;
-  --bg_gradient: 
-  repeating-linear-gradient(to right, #d3d3d3, rgba(211 211 211 / 0) 2px),
-  repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a 2px);
-  --text_shadow: 1px 1px 0px #fff; 
+  --bg_gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      rgba(211 211 211 / 0) 2px
+    ),
+    repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a 2px);
+  --text_shadow: 1px 1px 0px #fff;
   --text_stroke: #fff;
+  --button_text: #fff;
+  --heart_contour_color: #000;
 }
 
 @media (prefers-color-sceme: light) {
@@ -23,18 +28,23 @@
     --bg_image: url(../images/bg\ light.png);
     --bg_color: #fff;
     --font_weight: 400;
-    --bg_gradient: 
-  repeating-linear-gradient(to right, #d3d3d3, rgba(211 211 211 / 0) 2px),
-  repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a 2px);
-    --text_shadow: 1px 1px 0px #fff; 
+    --bg_gradient: repeating-linear-gradient(
+        to right,
+        #d3d3d3,
+        rgba(211 211 211 / 0) 2px
+      ),
+      repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a 2px);
+    --text_shadow: 1px 1px 0px #fff;
     --text_stroke: #fff;
+    --button_text: #fff;
+    --heart_contour_color: #000;
   }
 
-  @supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
     .watermark {
       text-shadow: none;
       -webkit-text-stroke: 1px var(--text_stroke, #fff);
       text-stroke: 1px var(--text_stroke, #fff);
     }
-}
+  }
 }

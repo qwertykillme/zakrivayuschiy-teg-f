@@ -1,6 +1,6 @@
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {

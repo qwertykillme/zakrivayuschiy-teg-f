@@ -72,6 +72,7 @@
 .theme-menu__button:disabled {
   opacity: 0.6;
   pointer-events: none;
+  user-select: none;
 }
 
 .theme-menu__button:disabled::before {
@@ -240,8 +241,11 @@
   background-color: var(--bg_color);
 }
 
-.floppy_footer {
+.floppy {
   fill: var(--theme_color);
+}
+
+.floppy_footer {
   width: 21px;
   aspect-ratio: 1/1;
 }

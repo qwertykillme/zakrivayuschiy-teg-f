@@ -20,6 +20,7 @@
   --text_stroke: #fff;
   --button_text: #fff;
   --heart_contour_color: #000;
+  --text_weight: 400;
 }
 
 @media (prefers-color-sceme: light) {
@@ -38,13 +39,6 @@
     --text_stroke: #fff;
     --button_text: #fff;
     --heart_contour_color: #000;
-  }
-
-  @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
-    .watermark {
-      text-shadow: none;
-      -webkit-text-stroke: 1px var(--text_stroke, #fff);
-      text-stroke: 1px var(--text_stroke, #fff);
-    }
+    --text_weight: 400;
   }
 }

@@ -15,17 +15,18 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-color: var(--theme_color, #00cc14);
   font-family: var(--main_font);
   color: var(--theme_color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-variation-settings: "wght" var(--text_weight, 465);
 }
 
 .header {
   width: var(--window_width);
-  height: clamp(20.188rem, 3.85vw + 19.285rem, 22.75rem);
   font-family: var(--accent_font);
   background-color: var(--bg_color);
   display: flex;
@@ -45,6 +46,8 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 20px;
+  cursor: text;
+  text-decoration: none;
 }
 
 .header_subtitle {
@@ -66,6 +69,7 @@
   position: relative;
   text-align: center;
   font-size: 14px;
+  transition: opacity 0.3s ease;
   text-transform: uppercase;
 }
 
@@ -103,6 +107,7 @@
   font-weight: 785;
   line-height: normal;
   border-bottom: 2px solid var(--theme_color);
+  font-variation-settings: "wght" 785;
 }
 
 .card_image_section {
@@ -160,6 +165,7 @@
   mix-blend-mode: hard-light;
   opacity: 0.5;
   text-shadow: var(--text_shadow);
+  font-variation-settings: "wght" 400;
 }
 
 @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
@@ -174,7 +180,7 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
-  padding: 24px;
+  padding: 24px 24px 23.5px 24px;
   font-size: 18px;
   font-weight: var(--font_weight);
   line-height: 21px;
@@ -194,25 +200,8 @@
   border-color: transparent;
   block-size: 38px;
   cursor: pointer;
-  margin-right: 2px;
   transition: border 0.3s ease;
-}
-
-.contour {
-  transition: fill 0.1s;
-}
-
-.main-body {
-  transition: fill 0.3s;
-  transition-delay: 0.05s;
-}
-
-.core {
-  transition: fill 0.3s 0.03s;
-}
-
-.sparks {
-  opacity: 0;
+  transform: translate(4px);
 }
 
 .card__like-button {
@@ -223,14 +212,18 @@
   font-size: 14px;
   line-height: 90%;
   border: 2px solid var(--theme_color);
+  transition: 0.3s ease;
 }
 
-.footer {
-  margin-top: 50px;
+.dialog_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 51px;
   margin-bottom: 105px;
 }
 
-.footer_button {
+.dialog_form_button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,13 +232,14 @@
   width: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
   height: 51px;
   background-color: var(--bg_color);
+  transition: 0.3s ease;
 }
 
 .floppy {
   fill: var(--theme_color);
 }
 
-.floppy_footer {
+.floppy_form {
   width: 21px;
   aspect-ratio: 1/1;
 }
@@ -271,8 +265,7 @@
   background-color: var(--bg_color);
   font-size: 14px;
   width: 357px;
-  height: 193px;
-  padding: 0px 32.5px 0px 31.5px;
+  padding: 30px;
 }
 
 .dialog::backdrop {
@@ -295,9 +288,9 @@
   grid-area: floppy;
 }
 
-.dialog__title {
+.dialog_title {
   line-height: 150%;
-  color: var(--accent-color, #000);
+  color: var(--accent-color);
   text-transform: uppercase;
   grid-area: title;
 }
@@ -308,6 +301,7 @@
   padding: 9px 17px;
   text-align: center;
   border: 2px solid var(--theme_color);
+  text-transform: uppercase;
 }
 
 @media (width <= 375px) {
@@ -324,13 +318,26 @@
     top: 27px;
   }
 
-  .page .footer_button {
+  .page .dialog_form_button {
     flex-direction: column;
-    padding: 0 10px;
-    height: 83px;
+    gap: 8px;
+    height: 80px;
   }
 
-  .page .floppy_footer {
+  .page .floppy_form {
     width: 28px;
+  }
+
+  .page .dialog[open] {
+    width: 341px;
+    padding: 32px 40px;
+  }
+
+  .page .dialog_close_button {
+    width: 257px;
+  }
+
+  .page .dialog_title {
+    font-size: 14px;
   }
 }

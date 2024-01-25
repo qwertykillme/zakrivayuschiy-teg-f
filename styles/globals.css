@@ -38,10 +38,9 @@ input {
 }
 
 ul,
-ol, 
+ol,
 li {
   list-style: none;
-  padding: none;
   background: transparent;
 }
 
@@ -62,5 +61,3 @@ button {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-

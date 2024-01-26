@@ -23,7 +23,25 @@
   --text_weight: 400;
 }
 
-@media (prefers-color-sceme: light) {
+:root.theme-dark {
+  --main_font: "Inter-Variable", sans-serif;
+  --accent_font: "PressStart2P", sans-serif;
+  --theme_color: #00cc14;
+  --bg_image: url(../images/bg\ dark.png);
+  --bg_color: #000000;
+  --font_weight: 465;
+  --bg_gradient: repeating-linear-gradient(to right, #000, rgba(0 0 0 / 0) 2px),
+    repeating-linear-gradient(to bottom, #007f0c, #004306 2px);
+  --window_width: clamp(23.188rem, 30.545vw + 16.009rem, 43.5rem);
+  --text_shadow: 1px 1px 0px #000;
+  --text_stroke: #000;
+  --button_text: #00cc14;
+  --heart_contour_color: #00cc14;
+  --heart_sparks_color: #ff0000;
+  --text_weight: 465;
+}
+
+@media (prefers-color-scheme: light) {
   :root {
     --theme_color: #000;
     --bg_image: url(../images/bg\ light.png);
